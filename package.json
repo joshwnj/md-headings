@@ -1,0 +1,22 @@
+{
+  "name": "md-headings",
+  "version": "1.0.0",
+  "description": "Locate headings in a markdown file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "md-headings": "./bin/md-headings"
+  },
+  "keywords": [
+    "markdown",
+    "heading",
+    "outline"
+  ],
+  "author": "joshwnj",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^0.3.3"
+  }
+}

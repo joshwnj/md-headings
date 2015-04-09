@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var findHeadings = require('../');
+
+var filename = process.argv[2];
+
+function renderItem (item) {
+  var prefix = '#';
+
+  console.log(
+    '%s %s\n%s:%s:1\n',
+    prefix.repeat(item.depth),
+    item.text,
+    filename,
+    item.line
+  );
+}
+
+fs.readFile(filename, 'utf8', function (err, content) {
+  findHeadings(content).forEach(renderItem);
+});
